@@ -337,9 +337,9 @@ button:hover {
 <!-- ================= PASSWORD SCREEN ================= -->
 <div class="lock-screen" id="lockScreen">
   <div class="lock-box">
-    <div class="lock-title">🎂 Birthday Surprise</div>
-    <div class="lock-sub">Enter the password to open your birthday surprise 💌</div>
-    <div class="lock-countdown" id="lockCountdown">⏳ Loading birthday countdown...</div>
+    <div class="lock-title">🍾 Anniversary Surprise</div>
+    <div class="lock-sub">Enter the password to open your 10th month anniversary surprise 🍾</div>
+    <div class="lock-countdown" id="lockCountdown">⏳ Loading 10th month anniverary countdown...</div>
     <input type="password" id="passwordInput" placeholder="Password...">
     <button onclick="checkPassword()">Unlock 💖</button>
     <div class="lock-error" id="lockError">Wrong password 😭</div>
@@ -352,16 +352,16 @@ button:hover {
 
   <!-- PHOTO -->
   <div class="photo" onclick="photoSurprise()">
-    <img src="us.png" alt="Us together 🩵🤍">
+    <img src="onlyher.png" alt="Us together 🩵🤍">
   </div>
   <div class="photo-message" id="photoMsg">
-    This is my favorite picture because we're in it hehe <3 💖
+    This is my favorite picture because i love ur avatar baby <3 💖
   </div>
 
   <div class="card">
 
     <!-- COUNTDOWN / TIME SINCE BIRTHDAY -->
-    <div class="countdown" id="countdown">⏳ Loading birthday countdown...</div>
+    <div class="countdown" id="countdown">⏳ Loading 10th month anniverary countdown...</div>
 
     <!-- TIME TOGETHER -->
     <div class="counter" id="counter">💞 Calculating our time together...</div>
@@ -395,8 +395,8 @@ button:hover {
     <div class="scratch-container">
       <div style="margin-bottom:8px;">😊 Scratch to reveal</div>
       <div class="scratch-card" id="scratchCard">
-        <div class="scratch-text">I MIGHT kiss u on lips🥺</br>
-          RB4V BBNR 4GKE FVST</div>
+        <div class="scratch-text">I love u baby🥺</br>
+          ur gift is in tele :3</div>
         <div class="scratch-overlay" id="scratchOverlay"></div>
       </div>
     </div>
@@ -404,18 +404,18 @@ button:hover {
 
     <!-- MINI GAME -->
     <div class="game">
-      <div class="score">🍰 cake slices collected: <span id="score">0</span></div>
+      <div class="score">🍾 champagnes collected: <span id="score">0</span></div>
       <div class="game-area" id="gameArea"></div>
     </div>
   </div>
 </div>
 
 <!-- ================= COMBO POPUP ================= -->
-<div class="combo-popup" id="comboPopup">🎂 COMBO x10!</div>
+<div class="combo-popup" id="comboPopup">🍾 COMBO x10!</div>
 
 <script>
 /* ================= PASSWORD ================= */
-const correctPassword = "grace<3;mar30";
+const correctPassword = "grace<3;onlyurs";
 
 function checkPassword(){
   const input = document.getElementById("passwordInput").value;
@@ -433,7 +433,7 @@ function checkPassword(){
 }
 
 /* ================= COUNTDOWN ================= */
-const birthdayDate = new Date("March 30, 2026 00:00:00");
+const birthdayDate = new Date("June 10, 2026 00:00:00");
 
 function updateCountdown(){
   const now = new Date();
@@ -451,9 +451,9 @@ function updateCountdown(){
   let text = "";
 
   if(now < birthdayDate){
-    text = `⏳ Birthday in <strong>${days}</strong>d <strong>${hours}</strong>h <strong>${minutes}</strong>m <strong>${seconds}</strong>s 💖`;
+    text = `⏳ 10th month anniversary in <strong>${days}</strong>d <strong>${hours}</strong>h <strong>${minutes}</strong>m <strong>${seconds}</strong>s 💖`;
   } else {
-    text = `⏳ It’s been <strong>${days}</strong>d <strong>${hours}</strong>h <strong>${minutes}</strong>m <strong>${seconds}</strong>s since your Birthday 💖`;
+    text = `⏳ It’s been <strong>${days}</strong>d <strong>${hours}</strong>h <strong>${minutes}</strong>m <strong>${seconds}</strong>s since 10th month anniversary 💖`;
   }
 
   elMain.innerHTML = text;
@@ -498,7 +498,7 @@ function photoSurprise(){
 setInterval(()=>{
   const heart = document.createElement("div");
   heart.className = "heart";
-  heart.innerHTML = "🎊";
+  heart.innerHTML = "🍾";
   heart.style.left = Math.random()*100 + "vw";
   heart.style.fontSize = Math.random()*20 + 16 + "px";
   heart.style.animationDuration = Math.random()*3 + 4 + "s";
@@ -577,7 +577,7 @@ const gameArea = document.getElementById("gameArea");
 const comboPopup = document.getElementById("comboPopup");
 
 function showCombo(){
-  comboPopup.textContent = `🎂 COMBO x${score}!`;
+  comboPopup.textContent = `🍾 COMBO x${score}!`;
   comboPopup.classList.add("show");
   confettiFlowers();
   setTimeout(()=>comboPopup.classList.remove("show"), 2000);
@@ -586,7 +586,7 @@ function showCombo(){
 function spawnHeart(){
   const heart = document.createElement("div");
   heart.className = "tap-heart";
-  heart.innerHTML = "🍰";
+  heart.innerHTML = "🍾";
   heart.style.left = Math.random()*85 + "%";
   heart.style.top = Math.random()*70 + "%";
   gameArea.appendChild(heart);
